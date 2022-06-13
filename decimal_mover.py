@@ -5,25 +5,30 @@
 # The code will move decimal spaces by user input
 
 
-def decimals(integer, decimal_movement):
+def decimals(integer, movement):
     # this code will make the decimal command
-    
-    # input
-    
-    integer = int(input("Enter in a integer with a decimal: "))
-    
-    decimal_movement = int(input("How many decimals do you want to remove?: "))
 
-    rounding = integer * 10 ** (decimal_movement) + 0.5 * 10 ** (-decimal_movement)
-    
+    # input
+
+    rounding = integer * (10 ** (movement)) + 0.5
+    rounding = int(rounding)
+    rounding = rounding / (10 ** (movement))
+
     return rounding
 
 
-
 def main():
-    
-    import math
-    
-    
-    
-    
+
+    # call functions
+    try:
+        integer = float(input("Enter in your decimal number: "))
+        movement = int(input("How many decimal spaces do you want it rounded to: "))
+        print("")
+
+        print(decimals(integer, movement))
+    except Exception:
+        print("Please follow the instructions listed above.")
+
+
+if __name__ == "__main__":
+    main()
