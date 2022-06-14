@@ -8,7 +8,7 @@
 def decimals(integer, movement):
     # this code will make the decimal command
 
-    # input
+    # process
 
     rounding = integer * (10 ** (movement)) + 0.5
     rounding = int(rounding)
@@ -20,6 +20,9 @@ def decimals(integer, movement):
 def main():
 
     # call functions
+
+    # input & output
+
     try:
         integer = float(input("Enter in your decimal number: "))
         movement = int(input("How many decimal spaces do you want it rounded to: "))
@@ -27,7 +30,7 @@ def main():
 
         print(decimals(integer, movement))
     except Exception:
-        print("Please follow the instructions listed above.")
+        print("\nPlease follow the instructions listed above.")
 
 
 if __name__ == "__main__":
